@@ -52,8 +52,7 @@ namespace InjuryRiskAssessment.Controllers
                         .Include(u => u.Notes)
                         .SelectMany(u => u.Notes)
                         .ToListAsync();
-
-            return View(await _db.Notes.ToListAsync());
+            return View(userNotes);
         }
 
         // GET: Notes/Details/5
